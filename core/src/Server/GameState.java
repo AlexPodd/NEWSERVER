@@ -2,6 +2,7 @@ package Server;
 
 import Entity.Enemy;
 import Entity.Player;
+import LvlManager.LvlManager;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 
 import java.sql.Timestamp;
@@ -39,10 +40,11 @@ public class GameState {
         }
         ProcessedPlayerInput.add(input);
     }
-    public void UpdateGame(float Time){
+    public void UpdateGame(float Time, LvlManager lvlManager){
         for(Enemy enemy : enemies){
             enemy.Update();
         }
+        lvlManager.UpdateMap(player1,player2);
         timestamp = new Timestamp(System.currentTimeMillis());
     }
     public GameState createCopy(Timestamp timestamp, GameState gameState){

@@ -38,8 +38,10 @@ public class UDPServer {
 
     private static Checker Pl1Checker;
     private static Checker Pl2Checker;
+
+    private static LvlManager lvlManager;
     public UDPServer(){
-        LvlManager lvlManager = new LvlManager();
+        lvlManager = new LvlManager();
         map = lvlManager.map;
         Pl1Checker = new Checker();
         Pl2Checker = new Checker();
@@ -98,7 +100,7 @@ public class UDPServer {
             LastUpdate = System.currentTimeMillis();
 
            InputProcessing();
-            Game.UpdateGame(TickTime);
+            Game.UpdateGame(TickTime, lvlManager);
             PrevGameState.add(Game.createCopy(new Timestamp(System.currentTimeMillis()),Game));
 
             int LastProcessedZap = 0;
