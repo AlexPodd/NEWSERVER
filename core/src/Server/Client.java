@@ -15,6 +15,14 @@ public class Client {
         return Number;
     }
 
+    public InetAddress getIP() {
+        return IP;
+    }
+
+    public int getPort() {
+        return Port;
+    }
+
     public Client(InetAddress IP, int Port){
         this.IP = IP;
         this.Port = Port;
