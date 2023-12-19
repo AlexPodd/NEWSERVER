@@ -2,6 +2,7 @@ package Server;
 
 import Entity.Enemy;
 import Entity.Player;
+import Entity.Skeleton;
 import LvlManager.LvlManager;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 
@@ -14,6 +15,7 @@ import java.security.NoSuchAlgorithmException;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Objects;
 import java.util.logging.Logger;
@@ -28,7 +30,7 @@ public class UDPServer {
 
     private static GameState Game;
 
-    private TiledMap map;
+    private int[][] map, MapCorrector, DoorMap;
 
     private LinkedList<Enemy> enemies;
 
@@ -42,12 +44,16 @@ public class UDPServer {
     private static LvlManager lvlManager;
     public UDPServer(){
         lvlManager = new LvlManager();
-        map = lvlManager.map;
+        map = lvlManager.getMap();
+        MapCorrector = lvlManager.getMapCorrector();
+        DoorMap = lvlManager.getOpenDoor();
         Pl1Checker = new Checker();
         Pl2Checker = new Checker();
         TickTime = 0;
+        Skeleton skeleton = new Skeleton(100,100, 2000, 0, 3, 16,16 ,1);
         enemies = new LinkedList<>();
-        Game = new GameState(new Timestamp(System.currentTimeMillis()), new Player(0,0,300,1,6,16,32,1), new Player(0,0,300,1,6,16,32,1),enemies, map);
+        enemies.add(skeleton);
+        Game = new GameState(new Timestamp(System.currentTimeMillis()), new Player(0,0,300,1,6,16,32,1,DoorMap), new Player(0,0,300,1,6,16,32,1, DoorMap),enemies, map, MapCorrector);
         PrevGameState = new LinkedList<>();
         Clients = new LinkedList<>();
         LastUpdate = System.currentTimeMillis();
@@ -132,6 +138,7 @@ public class UDPServer {
         while (!UnprocessedPlayerInput.isEmpty()){
             if (UnprocessedPlayerInput.getFirst().getNumber() == 1){
                 if(Pl1Checker.containsKey(UnprocessedPlayerInput.getFirst().getNumZap())){
+                    UnpInpRemFirst();
                     continue;
                 }
                 else {
@@ -140,14 +147,23 @@ public class UDPServer {
             }
             if (UnprocessedPlayerInput.getFirst().getNumber() == 2){
                 if(Pl2Checker.containsKey(UnprocessedPlayerInput.getFirst().getNumZap())){
+                    UnpInpRemFirst();
                     continue;
                 }
                 else {
                     Pl2Checker.put(UnprocessedPlayerInput.getFirst().getNumZap(), true);
                 }
             }
-            Game.UpdatePlayerPos(Objects.requireNonNull(UnprocessedPlayerInput.poll()));
+            Game.UpdatePlayerPos(Objects.requireNonNull(UnpInpPoll()));
         }
+    }
+
+
+    private synchronized void UnpInpRemFirst(){
+        UnprocessedPlayerInput.removeFirst();
+    }
+    private synchronized PlayerInput UnpInpPoll(){
+        return UnprocessedPlayerInput.poll();
     }
 
 
@@ -164,10 +180,9 @@ public class UDPServer {
 
 
 
-
-
-
-
+    public synchronized void AddUnpIn(String message, int number){
+        UnprocessedPlayerInput.add(new PlayerInput(message, number));
+    }
     public synchronized String calculateChecksum(String message) {
         try {
             String[] Split = message.split(" ");
@@ -212,11 +227,7 @@ public class UDPServer {
             };
             Client client = new Client(IP, Port);
             AddClient(client);
-            if (new PlayerInput(message, FindClient(IP, Port)) == null){
-                System.out.println(message);
-                return;
-            }
-            UnprocessedPlayerInput.add(new PlayerInput(message, FindClient(IP, Port)));
+            AddUnpIn(message, FindClient(IP, Port));
         }
         public synchronized boolean verifyChecksum(String message, String checksum) {
             String calculatedChecksum = calculateChecksum(message);

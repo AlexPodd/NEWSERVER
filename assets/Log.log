@@ -1,0 +1,140 @@
+дек. 20, 2023 1:40:01 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51177
+дек. 20, 2023 1:40:02 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51181
+дек. 20, 2023 1:40:06 AM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 123
+
+дек. 20, 2023 1:40:06 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:40:08 AM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 123
+
+дек. 20, 2023 1:40:08 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:40:08 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51177
+дек. 20, 2023 1:40:08 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51181
+дек. 20, 2023 1:40:14 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51185
+дек. 20, 2023 1:40:19 AM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 234
+
+дек. 20, 2023 1:40:19 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:40:20 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51190
+дек. 20, 2023 1:40:25 AM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 234
+
+дек. 20, 2023 1:40:25 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:40:25 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51185
+дек. 20, 2023 1:40:25 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51190
+дек. 20, 2023 1:40:34 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51195
+дек. 20, 2023 1:40:40 AM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 345
+
+дек. 20, 2023 1:40:40 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:40:42 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51200
+дек. 20, 2023 1:40:45 AM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 345
+
+дек. 20, 2023 1:40:45 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:40:45 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51195
+дек. 20, 2023 1:40:45 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51200
+дек. 20, 2023 1:40:56 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51205
+дек. 20, 2023 1:41:02 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51210
+дек. 20, 2023 1:41:05 AM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 456
+
+дек. 20, 2023 1:41:05 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:41:08 AM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 456
+
+дек. 20, 2023 1:41:08 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:41:08 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51205
+дек. 20, 2023 1:41:08 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51210
+дек. 20, 2023 1:41:22 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51219
+дек. 20, 2023 1:41:25 AM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:51220
+дек. 20, 2023 1:41:27 AM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 789
+
+дек. 20, 2023 1:41:27 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:41:30 AM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 789
+
+дек. 20, 2023 1:41:30 AM AsyncServer.AsyncServer Start
+INFO: Server message: E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1
+
+дек. 20, 2023 1:41:30 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51219
+дек. 20, 2023 1:41:30 AM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:51220
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51177
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51181], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51185], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51190], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51195], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51200], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51210], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51219], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51200
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51181], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51185], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51190], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51195], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51210], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51219], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51219
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51181], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51185], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51190], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51195], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51210], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51181
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51185], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51190], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51195], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51210], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51190
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51185], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51195], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51210], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51195
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51185], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51210], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51210
+дек. 20, 2023 1:44:50 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51185], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:51 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51185
+дек. 20, 2023 1:44:51 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205], java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51220]]
+дек. 20, 2023 1:44:51 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51220
+дек. 20, 2023 1:44:51 AM AsyncServer.AsyncServer Start
+INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:51205]]
+дек. 20, 2023 1:44:51 AM AsyncServer.AsyncServer Start
+INFO: Connection closed by client: /127.0.0.1:51205
+дек. 20, 2023 1:44:51 AM AsyncServer.AsyncServer Start
+INFO: []

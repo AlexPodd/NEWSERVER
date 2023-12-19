@@ -15,6 +15,7 @@ public abstract class Entity {
 
     protected boolean IsMovingRight, IsMovingLeft, IsMovingUp, IsMovingDown;
 
+    protected boolean IsAttacking;
     public Entity(){
     }
     public Entity(float x, float y, int AttackSpeed, float MoveSpeed, int Health, int Width, int Height, int Damage){
@@ -122,20 +123,19 @@ public abstract class Entity {
         }
         return counter;
     }
-    public boolean CanMoveHere(TiledMap map, Vector2 input) {
-        TiledMapTileLayer tileLayer = (TiledMapTileLayer) map.getLayers().get("Непроходимые");
-        TiledMapTileLayer tileLayer1 = (TiledMapTileLayer) map.getLayers().get("верхний слой");
+    public boolean CanMoveHere(int[][] map,int[][] mapCorrector, Vector2 input) {
         if (IsMovingRight) {
             if(Pos.x+input.x > 3168){
                 return false;
             }
-            if (((tileLayer.getCell(GetXPosTile1(input.x), GetYPosTile1(0)) != null) ||
-                    (tileLayer.getCell(GetXPosTile2(input.x), GetYPosTile2(0)) != null) ||
-                    (tileLayer.getCell(GetXPosTile3(input.x), GetYPosTile3(0)) != null) ||
-                    (tileLayer.getCell(GetXPosTile4(input.x), GetYPosTile4(0)) != null)) &&
-                    ((tileLayer1.getCell(GetXPosTile3(input.x), GetYPosTile3(0)) == null) &&
-                            (tileLayer1.getCell(GetXPosTile4(input.x), GetYPosTile4(0)) == null) )
-            ) {
+            if ( (
+                    (map[GetXPosTile1(input.x)][GetYPosTile1(0)] != 0) ||
+                    (map[GetXPosTile2(input.x)][GetYPosTile2(0)] != 0) ||
+                    (map[GetXPosTile3(input.x)][GetYPosTile3(0)] != 0) ||
+                    (map[GetXPosTile4(input.x)][GetYPosTile4(0)] != 0)) &&
+                    ((mapCorrector[GetXPosTile3(input.x)][GetYPosTile3(0)] == 0) &&
+                            (mapCorrector[GetXPosTile4(input.x)][GetYPosTile4(0)] == 0)))
+            {
                 return false;
             }
         }
@@ -143,14 +143,13 @@ public abstract class Entity {
             if(Pos.x-input.x <0){
                 return false;
             }
-            if (((tileLayer.getCell(GetXPosTile1(input.x), GetYPosTile1(0)) != null) ||
-                    (tileLayer.getCell(GetXPosTile2(input.x), GetYPosTile2(0)) != null) ||
-                    (tileLayer.getCell(GetXPosTile3(input.x), GetYPosTile3(0)) != null) ||
-                    (tileLayer.getCell(GetXPosTile4(input.x), GetYPosTile4(0)) != null)) &&
-                    ((tileLayer1.getCell(GetXPosTile1(input.x), GetYPosTile1(0)) == null) &&
-                            (tileLayer1.getCell(GetXPosTile2(input.x), GetYPosTile2(0)) == null)
-                    )
-            ){
+            if ( (
+                    (map[GetXPosTile1(input.x)][GetYPosTile1(0)] != 0) ||
+                            (map[GetXPosTile2(input.x)][GetYPosTile2(0)] != 0) ||
+                            (map[GetXPosTile3(input.x)][GetYPosTile3(0)] != 0) ||
+                            (map[GetXPosTile4(input.x)][GetYPosTile4(0)] != 0)) &&
+                    ((mapCorrector[GetXPosTile1(input.x)][GetYPosTile1(0)] == 0) &&
+                            (mapCorrector[GetXPosTile2(input.x)][GetYPosTile2(0)] == 0))){
                 return false;
             }
         }
@@ -158,15 +157,14 @@ public abstract class Entity {
             if(Pos.y+input.y > 3168){
                 return false;
             }
-            if (((tileLayer.getCell(GetXPosTile1(0), GetYPosTile1(input.y)) != null) ||
-                    (tileLayer.getCell(GetXPosTile2(0), GetYPosTile2(input.y)) != null) ||
-                    (tileLayer.getCell(GetXPosTile3(0), GetYPosTile3(input.y)) != null) ||
-                    (tileLayer.getCell(GetXPosTile4(0), GetYPosTile4(input.y)) != null)) &&
-                    (
-                            (tileLayer1.getCell(GetXPosTile2(0), GetYPosTile2(input.y)) == null) &&
-                                    (tileLayer1.getCell(GetXPosTile3(0), GetYPosTile3(input.y)) == null)
-                    )
-            ){
+            if ( (
+                    (map[GetXPosTile1(0)][GetYPosTile1(input.y)] != 0) ||
+                            (map[GetXPosTile2(0)][GetYPosTile2(input.y)] != 0) ||
+                            (map[GetXPosTile3(0)][GetYPosTile3(input.y)] != 0) ||
+                            (map[GetXPosTile4(0)][GetYPosTile4(input.y)] != 0)) &&
+                    ((mapCorrector[GetXPosTile2(0)][GetYPosTile2(input.y)] == 0) &&
+                            (mapCorrector[GetXPosTile3(0)][GetYPosTile3(input.y)] == 0)))
+            {
                 return false;
             }
         }
@@ -176,13 +174,14 @@ public abstract class Entity {
             if(Pos.y+input.y <0){
                 return false;
             }
-            if  (((tileLayer.getCell(GetXPosTile1(0), GetYPosTile1(input.y)) != null) ||
-                    (tileLayer.getCell(GetXPosTile2(0), GetYPosTile2(input.y)) != null) ||
-                    (tileLayer.getCell(GetXPosTile3(0), GetYPosTile3(input.y)) != null) ||
-                    (tileLayer.getCell(GetXPosTile4(0), GetYPosTile4(input.y)) != null)) &&
-                    ((tileLayer1.getCell(GetXPosTile1(0), GetYPosTile1(input.y)) == null) &&
-                            (tileLayer1.getCell(GetXPosTile4(0), GetYPosTile4(input.y)) == null) )
-            ){
+            if ( (
+                    (map[GetXPosTile1(0)][GetYPosTile1(input.y)] != 0) ||
+                            (map[GetXPosTile2(0)][GetYPosTile2(input.y)] != 0) ||
+                            (map[GetXPosTile3(0)][GetYPosTile3(input.y)] != 0) ||
+                            (map[GetXPosTile4(0)][GetYPosTile4(input.y)] != 0)) &&
+                    ((mapCorrector[GetXPosTile1(0)][GetYPosTile1(input.y)] == 0) &&
+                            (mapCorrector[GetXPosTile4(0)][GetYPosTile4(input.y)] == 0)))
+            {
                 return false;
             }
         }

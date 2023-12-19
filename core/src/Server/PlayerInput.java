@@ -72,4 +72,7 @@ public class PlayerInput implements Comparable<PlayerInput>{
     public int compareTo(PlayerInput other) {
         return Long.compare(this.timestamp.getTime(), other.getTimestamp().getTime());
     }
+    public String GetPlayerInput(){
+        return timestamp+" "+number+" "+NumZap;
+    }
 }
