@@ -16,12 +16,14 @@ public class NEWUDPServer {
     private static final Logger logger = Logger.getLogger("UDPServer");
     private DatagramSocket socket;
     private LinkedList<Room> Games;
+    private int Port;
     private RoomHandler roomHandler;
-    public NEWUDPServer() throws IOException {
+    public NEWUDPServer(int Port) throws IOException {
         FileHandler fileHandler = new FileHandler("assets/LogUDP.log");
         fileHandler.setFormatter(new SimpleFormatter());
         logger.addHandler(fileHandler);
 
+        this.Port = Port;
         Games = new LinkedList<>();
         socket = null;
     }
@@ -119,7 +121,7 @@ public class NEWUDPServer {
             @Override
             public void run() {
                 try {
-                    socket = new DatagramSocket(15914);
+                    socket = new DatagramSocket(Port);
                     byte[] receiveData = new byte[2048];
 
                     while (true) {

@@ -10,6 +10,10 @@ public class Player extends Entity{
     private boolean IsImmunity;
     private float TimeImmunity;
     private int[][] DoorMap;
+    private String state;
+    private Rectangle attackHitbox;
+
+
     public Player(Player player) {
         this.IsImmunity = player.IsImmunity;
         this.OpenDoor = player.OpenDoor;
@@ -21,7 +25,8 @@ public class Player extends Entity{
         this.Pos = player.Pos;
         this.MoveSpeed = player.MoveSpeed;
         this.DoorMap = player.DoorMap;
-
+        this.state = player.state;
+        this.attackHitbox = player.attackHitbox;
     }
     public int GetHP(){
         return Health;
@@ -29,6 +34,8 @@ public class Player extends Entity{
     public Player(float x, float y, int AttackSpeed, float MoveSpeed, int Health, int Width, int Height, int Damage, int[][] doorMap) {
         super(x, y, AttackSpeed, MoveSpeed, Health, Width, Height, Damage);
         this.DoorMap = doorMap;
+        attackHitbox = new Rectangle(0,0,0,0);
+        state = "NN";
     }
 
     @Override
@@ -63,6 +70,38 @@ public class Player extends Entity{
             Die();
         }
     }
+    public void SetDefoultAttack(){
+        attackHitbox = new Rectangle(0,0,0,0);
+        state = "NN";
+    }
+    public void Attack(String state){
+        if(state.equals("DA")){
+            attackHitbox = new Rectangle(Pos.x,Pos.y-10,10, getHitbox().height);
+            this.state = state;
+            return;
+        }
+        if(state.equals("UA")){
+            attackHitbox = new Rectangle(Pos.x,Pos.y+10,10, getHitbox().height);
+            this.state = state;
+            return;
+
+        }
+        if(state.equals("RA")){
+            attackHitbox = new Rectangle(Pos.x+ Hitbox.width,Pos.y,10, getHitbox().height);
+            this.state = state;
+            return;
+        }
+        if(state.equals("LA")){
+            attackHitbox = new Rectangle(Pos.x-10,Pos.y,10, getHitbox().height);
+            this.state = state;
+            return;
+        }
+    }
+
+    public String getState() {
+        return state;
+    }
+
     public void Die(){
         SetPos(0,0);
         Health = 6;
@@ -87,6 +126,10 @@ public class Player extends Entity{
         IsMovingUp = false;
         IsMovingRight = false;
         IsMovingLeft = false;
+    }
+
+    public Rectangle getAttackHitbox() {
+        return attackHitbox;
     }
 
     private boolean Door(Vector2 input){

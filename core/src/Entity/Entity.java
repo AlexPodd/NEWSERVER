@@ -30,6 +30,11 @@ public abstract class Entity {
         Pos.set(x,y);
         Hitbox.set(x,y, Hitbox.width, Hitbox.height);
     }
+
+    public Rectangle getHitbox() {
+        return Hitbox;
+    }
+
     public void Update(){
     }
     public void Attack(){
@@ -195,4 +200,5 @@ public abstract class Entity {
         Pos.add(input);
         Hitbox = new Rectangle(Pos.x,Pos.y, Hitbox.width, Hitbox.height);
     }
+
 }

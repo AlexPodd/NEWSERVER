@@ -53,13 +53,19 @@ public class Room {
         Pl2Checker = new Checker();
 
         TickTime = 0;
-        Skeleton skeleton1 = new Skeleton(800,800, 2000, 0, 3, 16,16 ,1);
-        Skeleton skeleton = new Skeleton(100,100, 2000, 0, 3, 16,16 ,1);
-        Skeleton skeleton2 = new Skeleton(1000,1000, 2000, 0, 3, 16,16 ,1);
+        Skeleton skeleton1 = new Skeleton(70,2130, 2000, 0, 3, 16,16 ,1);
+        Skeleton skeleton = new Skeleton(455,2120, 2000, 0, 3, 16,16 ,1);
+        Skeleton skeleton2 = new Skeleton(427,2590, 2000, 0, 3, 16,16 ,1);
+        Skeleton skeleton3 = new Skeleton(283,3023, 2000, 0, 3, 16,16 ,1);
+        Skeleton skeleton4 = new Skeleton(967,2851, 2000, 0, 3, 16,16 ,1);
+        Skeleton skeleton5 = new Skeleton(968,2726, 2000, 0, 3, 16,16 ,1);
         enemies = new LinkedList<>();
         enemies.add(skeleton);
         enemies.add(skeleton1);
         enemies.add(skeleton2);
+        enemies.add(skeleton3);
+        enemies.add(skeleton4);
+        enemies.add(skeleton5);
         Game = new GameState(new Timestamp(System.currentTimeMillis()), new Player(0,0,300,1,6,16,32,1,DoorMap), new Player(0,0,300,1,6,16,32,1, DoorMap),enemies, map, MapCorrector);
         PrevGameState = new LinkedList<>();
 
@@ -79,14 +85,16 @@ public class Room {
             TickTime += 50;
             InputProcessing();
             Game.UpdateGame(TickTime, lvlManager);
-            PrevGameState.add(Game.createCopy(new Timestamp(System.currentTimeMillis()), Game));
-                String Message = client1.getNumber() + " " +Game.getGameState()+" "+ Pl1Checker.getLastZapros();
+                String Message = client1.getNumber() + " " +Game.getGameState()+" "+ Pl1Checker.getLastZapros()+" ";
+                Message+= Game.GetEnemyMessage();
                 Message = Message + " " + calculateChecksum(Message);
                 server.SendMessage(Message, client1.getIP(), client1.getPort());
-            Message = client2.getNumber() + " " +Game.getGameState()+" "+ Pl2Checker.getLastZapros();
+            Message = client2.getNumber() + " " +Game.getGameState()+" "+ Pl2Checker.getLastZapros()+" ";
+           Message+= Game.GetEnemyMessage();
             Message = Message + " " + calculateChecksum(Message);
             server.SendMessage(Message, client2.getIP(), client2.getPort());
-
+            System.out.println(Message);
+        PrevGameState.add(Game.createCopy(new Timestamp(System.currentTimeMillis()), Game));
            }
 
 

@@ -37,33 +37,52 @@ public class GameState {
     public void UpdatePlayerPos(PlayerInput input){
         if(input.getNumber() == 1){
             player1.UpdatePos(input.getInputDir(), Map, MapCorrector);
+            player1.Attack(input.getState());
         }
         if(input.getNumber() == 2){
             player2.UpdatePos(input.getInputDir(), Map, MapCorrector);
+            player2.Attack(input.getState());
         }
         ProcessedPlayerInput.add(input);
     }
     public void UpdateGame(float Time, LvlManager lvlManager){
         lvlManager.UpdateMap(player1,player2);
+
         for(Enemy enemy : enemies) {
-            enemy.Update(player1.getPos(), player1.getPos(), Time);
+            if(Intersector.overlaps(enemy.getHitbox(), player1.getAttackHitbox()) || Intersector.overlaps(enemy.getHitbox(), player2.getAttackHitbox())){
+                enemy.GetDamaged(Time, 1);
+            }
+            enemy.Update(player1.getPos(), player2.getPos(), Time);
             if (enemy.GetProj() != null) {
                 if (Intersector.overlaps(enemy.GetProj(), player1.getHitbox())) {
                     player1.GetDamaged(Time, enemy.GetDamage());
                 }
+                if (Intersector.overlaps(enemy.GetProj(), player2.getHitbox())) {
+                    player2.GetDamaged(Time, enemy.GetDamage());
+                }
             }
+
         }
         timestamp = new Timestamp(System.currentTimeMillis());
     }
     public GameState createCopy(Timestamp timestamp, GameState gameState){
         GameState gameState1 = new GameState(gameState, timestamp);
         ProcessedPlayerInput = new LinkedList<>();
+        player1.SetDefoultAttack();
+        player2.SetDefoultAttack();
         return gameState1;
 
     }
+    public String GetEnemyMessage(){
+        String sum = "";
+        for(Enemy enemy: enemies){
+            sum+=enemy.EncodeEnemy()+" ";
+        }
+        return sum;
+    }
     public String getGameState(){
-        String pl1Info = player1.getPos()+""+player1.GetHP();
-        String pl2Info = player2.getPos()+""+player2.GetHP();
+        String pl1Info = player1.getPos()+""+player1.GetHP()+""+player1.getState();
+        String pl2Info = player2.getPos()+""+player2.GetHP()+""+player2.getState();
         return timestamp+" "+pl1Info+" "+pl2Info;
     }
 }

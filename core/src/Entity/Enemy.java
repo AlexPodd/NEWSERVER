@@ -9,6 +9,9 @@ public class Enemy extends Entity{
     protected float TimeImmunity;
 
     protected float PrevAttack;
+
+    protected String State;
+    protected String EnemyType;
     public Enemy() {
 
     }
@@ -27,20 +30,31 @@ public class Enemy extends Entity{
             Attack(Player1Pos, Player2Pos);
             IsAttacking = true;
         }
+        if(IsImmunity){
+            if(StateTime-TimeImmunity>1000){
+                IsImmunity = false;
+                State = "N";
+            }
+        }
         else {
             RandomMoving();
+        }
+    }
+    public void GetDamaged(float StateTime, int Damage){
+        if(!IsImmunity){
+            Health-=Damage;
+            IsImmunity = true;
+            State = "I";
+            TimeImmunity = StateTime;
+        }
+        if(Health < 1){
+            Die();
         }
     }
     public int GetDamage(){
         return Damage;
     }
     public void Attack(Vector2 Player1Pos, Vector2 Player2Pos) {
-    }
-    public void GetDamaged(float Damage){
-        Health -=Damage;
-        if(Health<0){
-            Die();
-        }
     }
     protected boolean PlayerIsHere(Vector2 posPlayer1, Vector2 posPlayer2){
         float Distance1 = posPlayer1.dst(Pos);
@@ -54,6 +68,7 @@ public class Enemy extends Entity{
     }
 
     public void Die() {
+        SetPos(-1000,1000);
     }
 
     @Override
@@ -64,7 +79,8 @@ public class Enemy extends Entity{
         return null;
     }
     protected void RandomMoving(){
-
-
+    }
+    public String EncodeEnemy(){
+        return null;
     }
 }

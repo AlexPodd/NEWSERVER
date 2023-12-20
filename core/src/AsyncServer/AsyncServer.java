@@ -115,11 +115,11 @@ public class AsyncServer {
                 else {
                     ActiveRoomName.add(Command[1]);
                     roomHandler.AddTcpClient(Command[1], Addr);
-                    return "E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1\r\n";
+                    return "E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1\r\n";
                 }
             case "ConnectToRoom":
                 roomHandler.AddTcpClient(Command[1], Addr);
-                return "E 0SN100#100#-1#-1 1SN1000#1000#-1#-1 2SN800#800#-1#-1\r\n";
+                return "E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1\r\n";
         }
         return "ReceivedMessage\r\n";
     }

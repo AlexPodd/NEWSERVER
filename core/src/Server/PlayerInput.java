@@ -14,6 +14,8 @@ public class PlayerInput implements Comparable<PlayerInput>{
     private final Vector2 InputDir;
     private final int NumZap;
 
+    private final String state;
+
 
     public int getNumber() {
         return number;
@@ -21,7 +23,6 @@ public class PlayerInput implements Comparable<PlayerInput>{
 
     public PlayerInput(String Message, int number){
         String[] InputWords = Message.split(" ");
-
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS");
         Date parsedDate = null;
         try {
@@ -31,6 +32,7 @@ public class PlayerInput implements Comparable<PlayerInput>{
         }
         float X = 0;
         float Y = 0;
+        this.state = String.valueOf(InputWords[2].charAt(InputWords[2].length() - 2)) + InputWords[2].charAt(InputWords[2].length()-1);
         if(InputWords[2].charAt(1) == '-'){
 
             X =  Float.valueOf(String.valueOf(InputWords[2].charAt(1))+ InputWords[2].charAt(2) + InputWords[2].charAt(3) + InputWords[2].charAt(4));
@@ -72,6 +74,11 @@ public class PlayerInput implements Comparable<PlayerInput>{
     public int compareTo(PlayerInput other) {
         return Long.compare(this.timestamp.getTime(), other.getTimestamp().getTime());
     }
+
+    public String getState() {
+        return state;
+    }
+
     public String GetPlayerInput(){
         return timestamp+" "+number+" "+NumZap;
     }
