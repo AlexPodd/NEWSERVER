@@ -1,10 +1,54 @@
-дек. 20, 2023 8:35:48 PM Server.NEWUDPServer$ClientHandler run
-INFO: Connection /127.0.0.1:58746 /127.0.0.1 61245
-дек. 20, 2023 8:35:48 PM Server.NEWUDPServer AddUdpClient
-INFO: AddUPD /127.0.0.1:58746 /127.0.0.1 61245
-дек. 20, 2023 8:35:53 PM Server.NEWUDPServer$ClientHandler run
-INFO: Connection /127.0.0.1:58751 /127.0.0.1 61247
-дек. 20, 2023 8:35:53 PM Server.NEWUDPServer AddNewGame
-INFO: Start new Game with /127.0.0.1:61245/127.0.0.1:61247
-дек. 20, 2023 8:35:53 PM Server.NEWUDPServer AddUdpClient
-INFO: AddUPD /127.0.0.1:58751 /127.0.0.1 61247
+дек. 23, 2023 4:17:24 PM Server.NEWUDPServer <init>
+INFO: UDPSERVERISCreate
+дек. 23, 2023 4:17:24 PM Server.NEWUDPServer Receiver
+INFO: StartReceiver
+дек. 23, 2023 4:17:40 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63243 /127.0.0.1 55285
+дек. 23, 2023 4:17:40 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63243 /127.0.0.1 55285
+дек. 23, 2023 4:17:51 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63268 /127.0.0.1 60976
+дек. 23, 2023 4:17:51 PM Server.NEWUDPServer AddNewGame
+INFO: Start new Game with /127.0.0.1:55285/127.0.0.1:60976
+дек. 23, 2023 4:17:51 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63268 /127.0.0.1 60976
+дек. 23, 2023 4:18:38 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63324 /127.0.0.1 56788
+дек. 23, 2023 4:18:38 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63324 /127.0.0.1 56788
+дек. 23, 2023 4:18:40 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63322 /127.0.0.1 56787
+дек. 23, 2023 4:18:40 PM Server.NEWUDPServer AddNewGame
+INFO: Start new Game with /127.0.0.1:56788/127.0.0.1:56787
+дек. 23, 2023 4:18:40 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63322 /127.0.0.1 56787
+дек. 23, 2023 4:18:57 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63367 /127.0.0.1 57786
+дек. 23, 2023 4:18:57 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63367 /127.0.0.1 57786
+дек. 23, 2023 4:18:59 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63365 /127.0.0.1 57785
+дек. 23, 2023 4:18:59 PM Server.NEWUDPServer AddNewGame
+INFO: Start new Game with /127.0.0.1:57786/127.0.0.1:57785
+дек. 23, 2023 4:18:59 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63365 /127.0.0.1 57785
+дек. 23, 2023 4:19:26 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63405 /127.0.0.1 50851
+дек. 23, 2023 4:19:26 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63405 /127.0.0.1 50851
+дек. 23, 2023 4:19:28 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63403 /127.0.0.1 50850
+дек. 23, 2023 4:19:28 PM Server.NEWUDPServer AddNewGame
+INFO: Start new Game with /127.0.0.1:50851/127.0.0.1:50850
+дек. 23, 2023 4:19:28 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63403 /127.0.0.1 50850
+дек. 23, 2023 4:19:45 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63429 /127.0.0.1 52962
+дек. 23, 2023 4:19:45 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63429 /127.0.0.1 52962
+дек. 23, 2023 4:19:48 PM Server.NEWUDPServer$ClientHandler run
+INFO: Connection /127.0.0.1:63427 /127.0.0.1 52961
+дек. 23, 2023 4:19:49 PM Server.NEWUDPServer AddNewGame
+INFO: Start new Game with /127.0.0.1:52962/127.0.0.1:52961
+дек. 23, 2023 4:19:49 PM Server.NEWUDPServer AddUdpClient
+INFO: AddUPD /127.0.0.1:63427 /127.0.0.1 52961

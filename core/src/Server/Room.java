@@ -93,8 +93,22 @@ public class Room {
            Message+= Game.GetEnemyMessage();
             Message = Message + " " + calculateChecksum(Message);
             server.SendMessage(Message, client2.getIP(), client2.getPort());
-            System.out.println(Message);
         PrevGameState.add(Game.createCopy(new Timestamp(System.currentTimeMillis()), Game));
+        Timestamp oneSecondAgo = new Timestamp(System.currentTimeMillis()-1000);
+        if(PrevGameState.getFirst().getTimestamp().before(oneSecondAgo)){
+            while (!PrevGameState.getFirst().getProcessedPlayerInput().isEmpty()){
+                if (PrevGameState.getFirst().getProcessedPlayerInput().getFirst().getNumber() == 1){
+                Pl1Checker.remove(PrevGameState.getFirst().getProcessedPlayerInput().getFirst().getNumZap());
+                PrevGameState.getFirst().getProcessedPlayerInput().removeFirst();
+                }
+                else {
+                    Pl2Checker.remove(PrevGameState.getFirst().getProcessedPlayerInput().getFirst().getNumZap());
+                    PrevGameState.getFirst().getProcessedPlayerInput().removeFirst();
+                }
+            }
+
+         PrevGameState.removeFirst();
+        }
            }
 
 

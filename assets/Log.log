@@ -1,28 +1,100 @@
-дек. 20, 2023 8:35:44 PM AsyncServer.AsyncServer Start
-INFO: Accepted connection from client: /127.0.0.1:58746
-дек. 20, 2023 8:35:47 PM AsyncServer.AsyncServer Start
-INFO: Client message: CreateRoom 123
+дек. 23, 2023 4:17:35 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63243
+дек. 23, 2023 4:17:40 PM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 1
 
-дек. 20, 2023 8:35:47 PM AsyncServer.AsyncServer Start
+дек. 23, 2023 4:17:40 PM AsyncServer.AsyncServer Start
 INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
 
-дек. 20, 2023 8:35:50 PM AsyncServer.AsyncServer Start
-INFO: Accepted connection from client: /127.0.0.1:58751
-дек. 20, 2023 8:35:53 PM AsyncServer.AsyncServer Start
-INFO: Client message: ConnectToRoom 123
+дек. 23, 2023 4:17:47 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63268
+дек. 23, 2023 4:17:51 PM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 1
 
-дек. 20, 2023 8:35:53 PM AsyncServer.AsyncServer Start
+дек. 23, 2023 4:17:51 PM AsyncServer.AsyncServer Start
 INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
 
-дек. 20, 2023 8:35:53 PM AsyncServer.AsyncServer$1 run
-INFO: SendToClient StartNewGame /127.0.0.1:58746
-дек. 20, 2023 8:35:53 PM AsyncServer.AsyncServer$1 run
-INFO: SendToClient StartNewGame /127.0.0.1:58751
-дек. 20, 2023 8:37:00 PM AsyncServer.AsyncServer Start
-INFO: Connection closed by client: /127.0.0.1:58746
-дек. 20, 2023 8:37:00 PM AsyncServer.AsyncServer Start
-INFO: [java.nio.channels.SocketChannel[connected local=/127.0.0.1:8081 remote=/127.0.0.1:58751]]
-дек. 20, 2023 8:37:00 PM AsyncServer.AsyncServer Start
-INFO: Connection closed by client: /127.0.0.1:58751
-дек. 20, 2023 8:37:00 PM AsyncServer.AsyncServer Start
-INFO: []
+дек. 23, 2023 4:17:51 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63243
+дек. 23, 2023 4:17:51 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63268
+дек. 23, 2023 4:18:33 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63322
+дек. 23, 2023 4:18:33 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63324
+дек. 23, 2023 4:18:38 PM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 2
+
+дек. 23, 2023 4:18:38 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:18:40 PM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 2
+
+дек. 23, 2023 4:18:40 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:18:40 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63322
+дек. 23, 2023 4:18:40 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63324
+дек. 23, 2023 4:18:52 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63365
+дек. 23, 2023 4:18:53 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63367
+дек. 23, 2023 4:18:57 PM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 3
+
+дек. 23, 2023 4:18:57 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:18:59 PM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 3
+
+дек. 23, 2023 4:18:59 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:18:59 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63365
+дек. 23, 2023 4:18:59 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63367
+дек. 23, 2023 4:19:20 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63403
+дек. 23, 2023 4:19:20 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63405
+дек. 23, 2023 4:19:26 PM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 4
+
+дек. 23, 2023 4:19:26 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:19:28 PM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 4
+
+дек. 23, 2023 4:19:28 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:19:28 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63403
+дек. 23, 2023 4:19:28 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63405
+дек. 23, 2023 4:19:40 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63427
+дек. 23, 2023 4:19:40 PM AsyncServer.AsyncServer Start
+INFO: Accepted connection from client: /127.0.0.1:63429
+дек. 23, 2023 4:19:45 PM AsyncServer.AsyncServer Start
+INFO: Client message: CreateRoom 5
+
+дек. 23, 2023 4:19:45 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:19:48 PM AsyncServer.AsyncServer Start
+INFO: Client message: ConnectToRoom 5
+
+дек. 23, 2023 4:19:48 PM AsyncServer.AsyncServer Start
+INFO: Server message: E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1
+
+дек. 23, 2023 4:19:49 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63427
+дек. 23, 2023 4:19:49 PM AsyncServer.AsyncServer$1 run
+INFO: SendToClient StartNewGame /127.0.0.1:63429

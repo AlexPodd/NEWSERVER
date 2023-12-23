@@ -1,15 +1,12 @@
 package Server;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Checker implements Map {
-    private Map<Integer, Boolean> receivedMessages;
+    private Hashtable<Integer, Boolean> receivedMessages;
     private int LastZapros;
     public Checker() {
-        receivedMessages = new HashMap<Integer,Boolean>();
+        receivedMessages = new Hashtable<>();
         LastZapros = 0;
     }
 
@@ -79,4 +76,5 @@ public class Checker implements Map {
     public Set<Entry> entrySet() {
         return null;
     }
+
 }

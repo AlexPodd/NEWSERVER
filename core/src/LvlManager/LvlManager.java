@@ -48,7 +48,6 @@ public class LvlManager {
         for (Rectangle button : buttons) {
             if (button.contains(player1.getPos().x, player1.getPos().y) || button.contains(player2.getPos().x, player2.getPos().y)
             ) {
-                System.out.println(1);
                 OPENDOOR = true;
                 player1.OpenDoor = true;
                 player2.OpenDoor = true;

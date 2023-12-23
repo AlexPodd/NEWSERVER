@@ -3,11 +3,7 @@ package AsyncServer;
 import Server.RoomHandler;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.Iterator;
@@ -76,7 +72,6 @@ public class AsyncServer {
                                 clientSocketChannel.close();
                                 continue;
                         }
-                        // Проверяем, готов ли канал к чтению
                         if (clientSocketChannel.isConnectionPending()) {
                             clientSocketChannel.finishConnect();
                         }
@@ -87,9 +82,7 @@ public class AsyncServer {
                         byte[] data = new byte[buffer.limit()];
                         buffer.get(data);
                         String inputLine = new String(data);
-                        //получение сообщения от клинета
                         logger.info("Client message: "+inputLine);
-                        //отсылает клиенту ответное сообщение
                         String outputLine = ReplyMessage(inputLine, String.valueOf(clientSocketChannel.getRemoteAddress()));
                         logger.info("Server message: "+outputLine);
                         ByteBuffer responseBuffer = ByteBuffer.wrap((outputLine).getBytes());
@@ -118,6 +111,9 @@ public class AsyncServer {
                     return "E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1\r\n";
                 }
             case "ConnectToRoom":
+                if(!ActiveRoomName.contains(Command[1])){
+                    return "NameIsNotFound\r\n";
+                }
                 roomHandler.AddTcpClient(Command[1], Addr);
                 return "E SN3#70#2130#-1#-1 SN3#455#2120#-1#-1 SN3#427#2590#-1#-1 SN3#283#3023#-1#-1 SN3#967#2851#-1#-1 SN3#968#2726#-1#-1\r\n";
         }

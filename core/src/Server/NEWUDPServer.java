@@ -19,10 +19,11 @@ public class NEWUDPServer {
     private int Port;
     private RoomHandler roomHandler;
     public NEWUDPServer(int Port) throws IOException {
+
         FileHandler fileHandler = new FileHandler("assets/LogUDP.log");
         fileHandler.setFormatter(new SimpleFormatter());
         logger.addHandler(fileHandler);
-
+        logger.info("UDPSERVERISCreate");
         this.Port = Port;
         Games = new LinkedList<>();
         socket = null;
@@ -117,6 +118,7 @@ public class NEWUDPServer {
         }
     }
     public void Receiver() {
+        logger.info("StartReceiver");
         Thread udpServerReceiverThread = new Thread(new Runnable() {
             @Override
             public void run() {

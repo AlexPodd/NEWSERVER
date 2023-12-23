@@ -1,0 +1,70 @@
+дек. 23, 2023 4:17:40 PM Server.RoomHandler AddTcpClient
+INFO: Create new room Server.RoomHandler$Room@7bae215e
+дек. 23, 2023 4:17:40 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@7bae215e
+дек. 23, 2023 4:17:40 PM Server.RoomHandler AddUdpClient
+INFO: add first clietn /127.0.0.1:63243 /127.0.0.1:63243
+дек. 23, 2023 4:17:51 PM Server.RoomHandler AddTcpClient
+INFO: Add in room /127.0.0.1:63268
+дек. 23, 2023 4:17:51 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@7bae215e
+дек. 23, 2023 4:17:51 PM Server.RoomHandler AddUdpClient
+INFO: add 2 clietn /127.0.0.1:63268 /127.0.0.1:63268
+дек. 23, 2023 4:17:51 PM Server.RoomHandler AddUdpClient
+INFO: StartTheGameMessage 
+дек. 23, 2023 4:18:38 PM Server.RoomHandler AddTcpClient
+INFO: Create new room Server.RoomHandler$Room@d8b2818
+дек. 23, 2023 4:18:38 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@d8b2818
+дек. 23, 2023 4:18:38 PM Server.RoomHandler AddUdpClient
+INFO: add first clietn /127.0.0.1:63324 /127.0.0.1:63324
+дек. 23, 2023 4:18:40 PM Server.RoomHandler AddTcpClient
+INFO: Add in room /127.0.0.1:63322
+дек. 23, 2023 4:18:40 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@d8b2818
+дек. 23, 2023 4:18:40 PM Server.RoomHandler AddUdpClient
+INFO: add 2 clietn /127.0.0.1:63322 /127.0.0.1:63322
+дек. 23, 2023 4:18:40 PM Server.RoomHandler AddUdpClient
+INFO: StartTheGameMessage 
+дек. 23, 2023 4:18:57 PM Server.RoomHandler AddTcpClient
+INFO: Create new room Server.RoomHandler$Room@3ac15d2
+дек. 23, 2023 4:18:57 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@3ac15d2
+дек. 23, 2023 4:18:57 PM Server.RoomHandler AddUdpClient
+INFO: add first clietn /127.0.0.1:63367 /127.0.0.1:63367
+дек. 23, 2023 4:18:59 PM Server.RoomHandler AddTcpClient
+INFO: Add in room /127.0.0.1:63365
+дек. 23, 2023 4:18:59 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@3ac15d2
+дек. 23, 2023 4:18:59 PM Server.RoomHandler AddUdpClient
+INFO: add 2 clietn /127.0.0.1:63365 /127.0.0.1:63365
+дек. 23, 2023 4:18:59 PM Server.RoomHandler AddUdpClient
+INFO: StartTheGameMessage 
+дек. 23, 2023 4:19:26 PM Server.RoomHandler AddTcpClient
+INFO: Create new room Server.RoomHandler$Room@397d5423
+дек. 23, 2023 4:19:26 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@397d5423
+дек. 23, 2023 4:19:26 PM Server.RoomHandler AddUdpClient
+INFO: add first clietn /127.0.0.1:63405 /127.0.0.1:63405
+дек. 23, 2023 4:19:28 PM Server.RoomHandler AddTcpClient
+INFO: Add in room /127.0.0.1:63403
+дек. 23, 2023 4:19:28 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@397d5423
+дек. 23, 2023 4:19:28 PM Server.RoomHandler AddUdpClient
+INFO: add 2 clietn /127.0.0.1:63403 /127.0.0.1:63403
+дек. 23, 2023 4:19:28 PM Server.RoomHandler AddUdpClient
+INFO: StartTheGameMessage 
+дек. 23, 2023 4:19:45 PM Server.RoomHandler AddTcpClient
+INFO: Create new room Server.RoomHandler$Room@32ac67ad
+дек. 23, 2023 4:19:45 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@32ac67ad
+дек. 23, 2023 4:19:45 PM Server.RoomHandler AddUdpClient
+INFO: add first clietn /127.0.0.1:63429 /127.0.0.1:63429
+дек. 23, 2023 4:19:48 PM Server.RoomHandler AddTcpClient
+INFO: Add in room /127.0.0.1:63427
+дек. 23, 2023 4:19:48 PM Server.RoomHandler AddUdpClient
+INFO: First udp add Server.RoomHandler$Room@32ac67ad
+дек. 23, 2023 4:19:48 PM Server.RoomHandler AddUdpClient
+INFO: add 2 clietn /127.0.0.1:63427 /127.0.0.1:63427
+дек. 23, 2023 4:19:48 PM Server.RoomHandler AddUdpClient
+INFO: StartTheGameMessage 

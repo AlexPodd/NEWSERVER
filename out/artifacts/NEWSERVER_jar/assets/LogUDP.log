@@ -1,10 +1,4 @@
-δεκ. 20, 2023 8:35:48 PM Server.NEWUDPServer$ClientHandler run
-INFO: Connection /127.0.0.1:58746 /127.0.0.1 61245
-δεκ. 20, 2023 8:35:48 PM Server.NEWUDPServer AddUdpClient
-INFO: AddUPD /127.0.0.1:58746 /127.0.0.1 61245
-δεκ. 20, 2023 8:35:53 PM Server.NEWUDPServer$ClientHandler run
-INFO: Connection /127.0.0.1:58751 /127.0.0.1 61247
-δεκ. 20, 2023 8:35:53 PM Server.NEWUDPServer AddNewGame
-INFO: Start new Game with /127.0.0.1:61245/127.0.0.1:61247
-δεκ. 20, 2023 8:35:53 PM Server.NEWUDPServer AddUdpClient
-INFO: AddUPD /127.0.0.1:58751 /127.0.0.1 61247
+Π΄ΠµΠΊ. 20, 2023 10:30:19 PM Server.NEWUDPServer <init>
+INFO: UDPSERVERISCreate
+Π΄ΠµΠΊ. 20, 2023 10:30:19 PM Server.NEWUDPServer Receiver
+INFO: StartReceiver

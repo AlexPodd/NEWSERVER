@@ -26,6 +26,11 @@ public class GameState {
         this.MapCorrector = MapCorrector;
         ProcessedPlayerInput = new LinkedList<>();
     }
+
+    public LinkedList<PlayerInput> getProcessedPlayerInput() {
+        return ProcessedPlayerInput;
+    }
+
     public GameState(GameState gameState, Timestamp timestamp){
         this.enemies = gameState.enemies;
         this.player1 = new Player(gameState.player1);
@@ -65,6 +70,11 @@ public class GameState {
         }
         timestamp = new Timestamp(System.currentTimeMillis());
     }
+
+    public Timestamp getTimestamp() {
+        return timestamp;
+    }
+
     public GameState createCopy(Timestamp timestamp, GameState gameState){
         GameState gameState1 = new GameState(gameState, timestamp);
         ProcessedPlayerInput = new LinkedList<>();
